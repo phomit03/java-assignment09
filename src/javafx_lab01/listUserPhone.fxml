@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_lab01.Controller">
+   <children>
+      <Text layoutX="15.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter contact information:" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="inputName" layoutX="14.0" layoutY="83.0" prefHeight="31.0" prefWidth="300.0" promptText="Input Name" />
+      <TextField fx:id="inputPhone" layoutX="327.0" layoutY="83.0" prefHeight="31.0" prefWidth="300.0" promptText="Input Phone" />
+      <Button layoutX="641.0" layoutY="83.0" mnemonicParsing="false" onAction="#addPhoneList" prefHeight="31.0" prefWidth="145.0" text="Add to phone list" />
+      <Text fx:id="msgE_S" fill="BLUE" layoutX="135.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MsgE_S" visible="false" wrappingWidth="451.44921875" />
+      <Text layoutX="14.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact List:" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtSearchName" layoutX="14.0" layoutY="212.0" prefHeight="31.0" prefWidth="666.0" promptText="Search by name" />
+      <Button layoutX="678.0" layoutY="212.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="108.0" text="Search " />
+      <Text fx:id="msgSearch" fill="BLUE" layoutX="31.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Msg_search" visible="false" wrappingWidth="666.0" />
+      <TableView fx:id="tbViewPhone" layoutX="13.0" layoutY="287.0" prefHeight="504.0" prefWidth="774.0">
+        <columns>
+          <TableColumn fx:id="outName" prefWidth="209.0" text="Name" />
+          <TableColumn fx:id="outPhone" minWidth="0.0" prefWidth="346.0" text="Phone" />
+            <TableColumn fx:id="cEdit" prefWidth="113.0" text="Edit" />
+            <TableColumn fx:id="cDelete" prefWidth="105.0" text="Delete" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
